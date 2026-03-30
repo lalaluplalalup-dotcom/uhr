@@ -26,6 +26,7 @@ strip.showRainbow(1, 360)
 strip.show()
 basic.pause(5000)
 strip.clear()
+strip.showColor(neopixel.colors(NeoPixelColors.Blue))
 strip.show()
 let minuten_counter = 0
 loops.everyInterval(60000, function () {
