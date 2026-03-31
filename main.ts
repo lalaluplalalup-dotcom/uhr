@@ -17,11 +17,20 @@ input.onButtonEvent(Button.B, input.buttonEventClick(), function () {
     basic.showNumber(minute)
     basic.clearScreen()
 })
+input.onGesture(Gesture.Shake, function () {
+    for (let Index = 0; Index <= 120; Index++) {
+        strip.setPixelColor(Index, neopixel.colors(NeoPixelColors.Green))
+        strip.show()
+        basic.pause(100)
+        basic.showNumber(Index)
+    }
+})
+let strip: neopixel.Strip = null
 let stunde = 0
 let minute = 0
 minute = 0
 stunde = 0
-let strip = neopixel.create(DigitalPin.P3, 30, NeoPixelMode.RGB)
+strip = neopixel.create(DigitalPin.P3, 30, NeoPixelMode.RGB)
 strip.showRainbow(1, 360)
 strip.show()
 basic.pause(5000)
