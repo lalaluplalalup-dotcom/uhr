@@ -15,6 +15,8 @@ let minute = 0
 minute = 0
 stunde = 0
 let strip = neopixel.create(DigitalPin.P0, 120, NeoPixelMode.RGB)
+strip.setBrightness(255)
+strip.showColor(neopixel.colors(NeoPixelColors.Indigo))
 loops.everyInterval(60000, function () {
     minute += 1
     if (minute == 60) {
