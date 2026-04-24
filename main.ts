@@ -13,6 +13,8 @@ input.onButtonEvent(Button.AB, input.buttonEventClick(), function () {
     basic.showString("M")
     basic.showNumber(minute)
     basic.clearScreen()
+    zeigeMinuten()
+    zeigeStunden()
 })
 input.onButtonEvent(Button.B, input.buttonEventClick(), function () {
     minute += 1
