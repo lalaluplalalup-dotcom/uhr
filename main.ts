@@ -21,7 +21,7 @@ input.onButtonEvent(Button.B, input.buttonEventClick(), function () {
     uhrCheck()
 })
 function zeigeStunden () {
-    stunden_strip.showColor(neopixel.colors(NeoPixelColors.Indigo))
+    stunden_strip.showColor(neopixel.colors(NeoPixelColors.Blue))
     for (let Index = 0; Index <= stunde * leds_pro_stunde - 1; Index++) {
         stunden_strip.setPixelColor(Index, neopixel.colors(NeoPixelColors.Red))
     }
@@ -32,7 +32,7 @@ input.onGesture(Gesture.Shake, function () {
     zeigeStunden()
 })
 function zeigeMinuten () {
-    strip.showColor(neopixel.colors(NeoPixelColors.Indigo))
+    strip.showColor(neopixel.colors(NeoPixelColors.Blue))
     for (let Index = 0; Index <= minute * leds_an_pro_minute - 1; Index++) {
         strip.setPixelColor(Index, neopixel.colors(NeoPixelColors.Red))
     }
@@ -60,11 +60,11 @@ stunde = 0
 minutenlimit = 60
 stundenlimit = 12
 strip = neopixel.create(DigitalPin.P3, 118, NeoPixelMode.RGB)
-stunden_strip = neopixel.create(DigitalPin.P0, 22, NeoPixelMode.RGB)
+stunden_strip = neopixel.create(DigitalPin.P1, 22, NeoPixelMode.RGB)
 leds_an_pro_minute = 2
 leds_pro_stunde = 2
-strip.showColor(neopixel.colors(NeoPixelColors.Indigo))
-stunden_strip.showColor(neopixel.colors(NeoPixelColors.Indigo))
+strip.showColor(neopixel.colors(NeoPixelColors.Blue))
+stunden_strip.showColor(neopixel.colors(NeoPixelColors.Blue))
 loops.everyInterval(60000, function () {
     minute += 1
     uhrCheck()
